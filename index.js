@@ -1,5 +1,6 @@
 const game = document.querySelector('#game')
 const scoreDisplay = document.getElementById('score')
+let score = 0
 
 const jeopardyCategories = [
     {
@@ -116,8 +117,30 @@ const jeopardyCategories = [
                 level: 'hard'
             }
         ]
+    },
+    {
+        genre: 'QUEBEC',
+        questions: [
+            {
+                question: 'Where is the capital of Quebec?',
+                answers: ['Montreal', 'Quebec City', 'Yo', 'Boom'],
+                correct: 'Quebec City',
+                level: 'easy'
+            },
+            {
+                question: 'Where is the capital of Quebec?',
+                answers: ['Montreal', 'Quebec City', 'Yo', 'Boom'],
+                correct: 'Quebec City',
+                level: 'medium'
+            },
+            {
+                question: 'Where is the capital of Quebec?',
+                answers: ['Montreal', 'Quebec City', 'Yo', 'Boom'],
+                correct: 'Quebec City',
+                level: 'hard'
+            }
+        ]
     }
-
 ]
 
 function addCategory(category) {
@@ -162,7 +185,7 @@ jeopardyCategories.forEach(category => addCategory(category))
 
 function flipCard() {
     this.innerHTML = ''
-    this.style.fontSize = '14px'
+    this.style.fontSize = '18px'
     this.style.lineHeight = '30px'
     const textDisplay = document.createElement('div')
     textDisplay.classList.add('card-text')
@@ -179,9 +202,51 @@ function flipCard() {
     secondButton.innerHTML = this.getAttribute('data-answer-2')
     thirdButton.innerHTML = this.getAttribute('data-answer-3')
     fourthButton.innerHTML = this.getAttribute('data-answer-4')
+    firstButton.addEventListener('click', getResult)
+    secondButton.addEventListener('click', getResult)
+    thirdButton.addEventListener('click', getResult)
+    fourthButton.addEventListener('click', getResult)
     this.append(textDisplay, firstButton, secondButton, thirdButton, fourthButton)
 
     const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.removeEventListener('click', flipCard))
 
+}
+
+
+
+function getResult() {
+
+    const allCards = Array.from(document.querySelectorAll('.card'))
+    allCards.forEach(card => card.addEventListener('click', flipCard))
+    const cardOfButton = this.parentElement
+    cardOfButton.classList.add('display-score')
+
+    if (cardOfButton.getAttribute('data-correct') === this.innerHTML) {
+        score = score + parseInt(cardOfButton.getAttribute('data-value'))
+        scoreDisplay.innerHTML = score
+        cardOfButton.classList.add('correct-answer')
+        setTimeout(() => {
+            while(cardOfButton.firstChild) {
+                cardOfButton.removeChild(cardOfButton.lastChild)
+            }
+            cardOfButton.style.fontSize = '30px'
+            cardOfButton.style.display ='grid'
+            cardOfButton.style.placeItems = 'center'
+            cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
+            
+        }, 100)
+    } else {
+        cardOfButton.classList.add('wrong-answer')
+        setTimeout(() => {
+            while(cardOfButton.firstChild) {
+                cardOfButton.removeChild(cardOfButton.lastChild)
+            }
+            cardOfButton.style.fontSize = '30px'
+            cardOfButton.style.display ='grid'
+            cardOfButton.style.placeItems = 'center'
+            cardOfButton.innerHTML = 0
+        }, 100)
+    }
+    cardOfButton.removeEventListener('click', flipCard)
 }
