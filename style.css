@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(12, 27, 127);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open sans', sans-serif;
+}
+
+#game {
+    background-color: #333;
+    display: flex;
+}
+
+.card {
+    width: 160px;
+    height: 120px;
+    background-color: rgb(26, 26, 255);
+    text-align: center;
+    font-size: 70px;
+    margin: 5px;
+    padding: 10px;
+    line-height: 120px;
+}
+
+button {
+    border: none;
+    margin-right: 3px;
+}
+
+.first-button {
+    background-color: red;
+}
+
+.second-button {
+    background-color: blueviolet;
+}
+
+.third-button {
+    background-color: green;
+}
+
+.fourth-button {
+    background-color: yellow;
+}
+
+.genre-title {
+    background-color: rgb(26, 26, 255);
+    text-align: center;
+    font-size: 28px;
+    padding: 5px;
+    margin: 5px;
+}
