@@ -12,7 +12,9 @@ body {
     font-family: 'Open sans', sans-serif;
 }
 
-
+#score {
+    color:rgb(200, 200, 200)
+}
 
 #game {
     background-color: #333;
@@ -100,6 +102,9 @@ button {
 
     h2 {
         position: sticky;
-
+        top: 20px;
+        /* width: 100%; */
+        /* text-align: center; */
     }
+
 }
