@@ -89,7 +89,7 @@ const jeopardyCategories = [
         level: "medium",
       },
       {
-        question: "",
+        question: "jhuoihjiojh",
         answers: ["Montreal", "Quebec City", "Yo", "Boom"],
         correct: "Quebec City",
         level: "hard",
@@ -185,7 +185,7 @@ jeopardyCategories.forEach((category) => addCategory(category));
 
 function flipCard() {
   this.innerHTML = "";
-  this.style.fontSize = "18px";
+  this.style.fontSize = "10px";
   this.style.lineHeight = "30px";
   const textDisplay = document.createElement("div");
   textDisplay.classList.add("card-text");
