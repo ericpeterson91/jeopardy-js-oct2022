@@ -54,9 +54,9 @@ const jeopardyCategories = [
     genre: "PRAIRIES",
     questions: [
       {
-        question: "Wh",
-        answers: ["Montreal", "Quebec City", "Yo", "Boom"],
-        correct: "Quebec City",
+        question: "What is the CFL football team in Saskatchewan called?",
+        answers: ["Stampeders", "Elks", "Rough Riders", "Rush"],
+        correct: "Rough Riders",
         level: "easy",
       },
       {
@@ -66,9 +66,9 @@ const jeopardyCategories = [
         level: "medium",
       },
       {
-        question: "Where is the capital of Quebec?",
-        answers: ["Montreal", "Quebec City", "Yo", "Boom"],
-        correct: "Quebec City",
+        question: "Where are the famous underground tunnels?",
+        answers: ["Prince Albert", "Swift Current", "North Battleford", "Moose Jaw"],
+        correct: "Moose Jaw",
         level: "hard",
       },
     ],
@@ -77,19 +77,19 @@ const jeopardyCategories = [
     genre: "ONTARIO",
     questions: [
       {
-        question: "Where is the capital of Quebec?",
-        answers: ["Montreal", "Quebec City", "Yo", "Boom"],
-        correct: "Quebec City",
+        question: "What is the tallest building in Canada?",
+        answers: ["CN Tower", "Eiffel Tower", "Empire State Building", "Zamboni Tower"],
+        correct: "CN Tower",
         level: "easy",
       },
       {
-        question: "Where is the capital of Quebec?",
-        answers: ["Montreal", "Quebec City", "Yo", "Boom"],
-        correct: "Quebec City",
+        question: "What is the second biggest city in Ontario?",
+        answers: ["Toronto", "Barrie", "Scarborough", "Ottawa"],
+        correct: "Ottawa",
         level: "medium",
       },
       {
-        question: "Where is the capital of Quebec?",
+        question: "",
         answers: ["Montreal", "Quebec City", "Yo", "Boom"],
         correct: "Quebec City",
         level: "hard",
