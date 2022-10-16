@@ -12,13 +12,26 @@ body {
     font-family: 'Open sans', sans-serif;
 }
 
+h1 {
+    color: rgb(207, 9, 9);
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    align-items: center;
+}
+
 #score {
     color:rgb(200, 200, 200)
 }
 
 #game {
-    background-color: #333;
+  
     display: flex;
+    font-size: 40px;
 }
 
 .card {
@@ -37,13 +50,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* .button-container {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 80px;
-    width: 100%;
-} */
 
 button {
     border-radius: 5px;
@@ -75,7 +81,8 @@ button {
 .genre-title {
     background-color: rgb(26, 26, 255);
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
+    height: 40px;
     padding: 5px;
     margin: 5px;
 }
@@ -97,14 +104,22 @@ button {
 @media (max-width: 600px) {
     #game {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     h2 {
         position: sticky;
         top: 20px;
-        /* width: 100%; */
-        /* text-align: center; */
+    }
+
+    .nav {
+        width: 90vw;
+        flex-direction: column
+    }
+
+    .genre-title {
+        margin-top: 40px;
+        
     }
 
 }
